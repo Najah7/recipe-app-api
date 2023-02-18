@@ -22,7 +22,7 @@ RUN python -m venv /py && \
     # postgreSQL用の追加のパッケージ（apkはAlpine Linuxのpakage manager）
     apk add --update --no-cache postgresql-client && \
     apk add --update --no-cache --virtual .tmp-build-deps \
-        build-base postgresql-dev mul-dev && \
+        build-base postgresql-dev musl-dev && \
     # pythonのパッケージをインストール
     /py/bin/pip install -r /tmp/requirements.txt && \
     # dev用のパッケージをインストール
