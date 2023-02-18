@@ -1,7 +1,7 @@
 ---
 name: Checks
 
-on: [ workflow_dispath ]
+on: [ workflow_dispatch ]
 
 jobs:
   test-lint:
