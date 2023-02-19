@@ -13,9 +13,10 @@ class UserAdmin(BaseUserAdmin):
     """Define the admin pages for users"""
     ordering = ['id']
     list_display = ['email', 'name']
-    fields_set = (
+    fieldsets = (
         # NOTE:Noneのところはタイトル
         (None, {'fields': ('email', 'password')}),
+        (_('Personal Info'), {'fields': ('name',)}),
         (
             _('Permissions'),
             {
@@ -26,7 +27,7 @@ class UserAdmin(BaseUserAdmin):
                 )
             }
         ),
-        (_('Importtant dates'), {'fields': ('last_login',)}),
+        (_('Important dates'), {'fields': ('last_login',)}),
     )
     readonly_fields = ['last_login']
     
