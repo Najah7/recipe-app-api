@@ -43,7 +43,7 @@ class PublicUserApiTest(TestCase):
     def test_user_with_email_exists_error(self):
         """Test error returned if user with email exists"""
         payload = {
-            'email' :'test@exmaple.com',
+            'email' :'test@example.com',
             'password': 'testpass123',
             'name': 'Test Name',
         }
@@ -71,7 +71,7 @@ class PublicUserApiTest(TestCase):
         """Test generates token for vaild credentials"""
         user_details = {
             'name': 'Test name',
-            'emai': 'test@example.com',
+            'email': 'test@example.com',
             'password': 'test-user-password123',
         }
         create_user(**user_details)

@@ -25,7 +25,7 @@ class UserSerializer(serializers.ModelSerializer):
     
 class AuthTokenSerializer(serializers.Serializer):
     """Serializer for the user auth token."""
-    emai = serializers.EmailField()
+    email = serializers.EmailField()
     password = serializers.CharField(
         style={'input_type': 'password'},
         # NOTE:Djantoはデフォルトで空白を取り除くようになっている。それを無効化
