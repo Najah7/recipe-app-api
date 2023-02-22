@@ -11,10 +11,10 @@ class UserSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = get_user_model()
-        field = ['email', 'password', 'name']
+        fields = ['email', 'password', 'name']
         extra_kwargs = {'password': {'write_only': True, 'min_length': 5}}
     
     # vaildationに通った時に呼び出されるメソッド
-    def create(self, validate_data):
+    def create(self, validated_data):
         """Create and return a user with encrypted password"""
-        return get_user_model().objects.create_user(**validate_data)
+        return get_user_model().objects.create_user(**validated_data)
