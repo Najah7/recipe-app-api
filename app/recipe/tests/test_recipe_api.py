@@ -2,6 +2,8 @@
 Tests for recipe APIs.
 """
 
+# pass all of tests 
+
 from decimal import Decimal
 
 from django.contrib.auth import get_user_model
