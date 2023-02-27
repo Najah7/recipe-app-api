@@ -99,4 +99,14 @@ class RecipeDetailSerializer(RecipeSerializer):
         fields = RecipeSerializer.Meta.fields + ['description']
         
 
-        
+class RecipeImageSerializer(serializers.ModelSerializer):
+    """Serializer for uploading images to recipes."""
+    
+    # NOTE:一つのAPIでひとつのデータタイプにするのがベストプラクティス。
+    #       なので、レシピViewとは別で作るべき。
+    
+    class Meta:
+        model = Recipe
+        fields = ['id', 'image']
+        read_only_field = ['id']
+        extra_kwargs = {'image': {'required': 'True'}}
