@@ -1,5 +1,7 @@
 # recipe-app-api
 
+# [ドキュメントへ](http://ec2-3-112-58-36.ap-northeast-1.compute.amazonaws.com/api/docs/)
+
 # このレポジトリについて
 レシピサイトを模倣したAIPを作成しました。<br>
 今まで、学んできたDjangoを使って、少し本格的にバックエンド開発を個人でしてみたものをアップロードしたレポジトリです。<br>
